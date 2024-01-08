@@ -1,3 +1,5 @@
+mod json_reader;
+
 fn main() {
-    println!("Hello, world!");
+    println!("{:?}",json_reader::typed_example());
 }
