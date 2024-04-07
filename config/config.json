@@ -1,0 +1,14 @@
+{
+    "statements": [
+        {
+            "description": "I like to be dominant over my partner(s).",
+            "label": "Dominant"
+        }, {
+            "description": "I like to submit to my partner(s).",
+            "label": "Submissive"
+        }, {
+            "description": "I like to swich roles between submitting to and dominating my partner(s).",
+            "label": "Submissive"
+        }
+    ]
+}
