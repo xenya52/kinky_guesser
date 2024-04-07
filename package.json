@@ -19,6 +19,7 @@
   },
   "type": "module",
   "dependencies": {
-    "flowbite-svelte": "^0.44.24"
+    "flowbite-svelte": "^0.44.24",
+    "svelte-routing": "^2.12.0"
   }
 }
