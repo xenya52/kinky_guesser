@@ -2,6 +2,8 @@
   import Questionnaire from "./components/Questionnaire.svelte"
   import { Button } from "flowbite-svelte"
   import { Route, Router, Link } from "svelte-routing";
+  import { DarkMode } from 'flowbite-svelte';
+
   let path = location.pathname;
 </script>
 
@@ -9,6 +11,7 @@
   <div on:click={() => (path = location.pathname)}>
     <Link to="/"><Button>Startpage</Button></Link>
     <Link to="/questionnaire"><Button>Questionnaire</Button></Link>
+    <DarkMode />
   </div>
     You are here: <code>{path}</code>
     <Route path="/">
