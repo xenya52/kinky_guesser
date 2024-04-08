@@ -15,7 +15,7 @@
 
 {#if !showResult}
     <div>
-        <p style="display: inline;">Strongly Disagree</p>
+        <p style="display: inline; float: left;">Strongly Disagree</p>
         <p style="display: inline; float: right; ">Strongly Agree</p>
     </div>
     {#each statements as statement}
@@ -29,3 +29,11 @@
 
 <Button on:click={() => (showResult = !showResult)} style="float: right">Submit</Button>
 
+<style>
+    p {
+        background-color: #c026d3;
+        font-size: 2vw;
+        padding: 2px;
+        border-radius: 2rem;
+    }
+</style>

@@ -6,19 +6,28 @@
 
   let path = location.pathname;
 </script>
-
-<Router>
-  <div on:click={() => (path = location.pathname)}>
-    <Link to="/"><Button>Startpage</Button></Link>
-    <Link to="/questionnaire"><Button>Questionnaire</Button></Link>
-    <DarkMode />
-  </div>
-    You are here: <code>{path}</code>
-    <Route path="/">
-      <h1>Welcome Home!</h1>
-    </Route>
-
-    <Route path="/questionnaire" component={Questionnaire}>
-      <h1>Welcome in Questionnaire!</h1>
-    </Route>
-</Router>
+<div class="body">
+  <Router>
+    <div  on:click={() => (path = location.pathname)}>
+      <Link to="/"><Button>Startpage</Button></Link>
+      <Link to="/questionnaire"><Button>Questionnaire</Button></Link>
+      <DarkMode />
+    </div>
+      You are here: <code>{path}</code>
+      <Route path="/">
+        <h1>Welcome Home!</h1>
+      </Route>
+  
+      <Route path="/questionnaire" component={Questionnaire}>
+        <h1>Welcome in Questionnaire!</h1>
+      </Route>
+  </Router>    
+</div>
+<style>
+  .body{
+    border: 1px solid red;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 5%;
+  }
+</style>

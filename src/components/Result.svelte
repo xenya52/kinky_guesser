@@ -10,5 +10,5 @@
 </script>
 
 {#each Array.from(results, ([name, value]) => ({ name, value })) as item}
-    <p>{item.name} {item.value}</p>
+    <p>{item.name} {item.value} ⌀</p>
 {/each}

@@ -9,6 +9,12 @@
         }, {
             "description": "I like to swich roles between submitting to and dominating my partner(s).",
             "label": "Switch"
+        }, {
+            "description": "I like dominant partner(s) ",
+            "label": "Submissive"
+        }, {
+            "description": "I like submissive partner(s) ",
+            "label": "Dominant"
         }
     ]
 }
