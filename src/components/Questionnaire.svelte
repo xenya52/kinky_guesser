@@ -12,15 +12,16 @@
     })
     let showResult = false
 </script>
-
 {#if !showResult}
-    <div>
-        <p style="display: inline; float: left;">Strongly Disagree</p>
-        <p style="display: inline; float: right; ">Strongly Agree</p>
+    <div class="test2">
+        <p>Strongly Disagree</p>
+        <p>Strongly Agree</p>
     </div>
     {#each statements as statement}
+    <div class="test">
         {statement.value}
         <Statement description={statement.description} bind:value={statement.value}/>
+    </div>    
     {/each}
 
 {:else}
@@ -32,8 +33,17 @@
 <style>
     p {
         background-color: #c026d3;
-        font-size: 2vw;
+        font-size: 1vw;
         padding: 2px;
         border-radius: 2rem;
+    }
+    .test2{
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    .test2 p{
+        margin-left: 20%;
+        margin-right: 20%;
+        text-align: center;
     }
 </style>
