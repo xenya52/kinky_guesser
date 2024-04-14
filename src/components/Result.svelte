@@ -1,13 +1,18 @@
 <script>
-  import RoundChart from "./PieChart.svelte";
+    import { label } from "@unovis/ts/components/axis/style";
+  import PieChart from "./PieChart.svelte";
 
     export let statements
+    let charData = []
     const results = new Map()
     Map.groupBy(statements, ({ label }) => label)
         .forEach((value,key) => {
             let sum = 0, total = 0
             value.forEach(item => (sum += item.value, total++))
             results.set(key, sum/total)
+            charData.push(
+                {"name":key, "value":sum/total}
+            )
     })
 </script>
 
@@ -15,4 +20,4 @@
     <p>{item.name} {item.value} ⌀</p>
 {/each}
 
-<RoundChart/>
+<PieChart results={charData}/>
