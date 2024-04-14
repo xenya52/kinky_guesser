@@ -16,5 +16,11 @@
             "description": "I like submissive partner(s) ",
             "label": "Dominant"
         }
+    ],
+    "groupings": [
+        {
+            "name": "Inclination",
+            "labels": ["Dominant", "Switch", "Submissive"]
+        }
     ]
 }

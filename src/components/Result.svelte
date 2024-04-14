@@ -1,4 +1,6 @@
 <script>
+  import RoundChart from "./PieChart.svelte";
+
     export let statements
     const results = new Map()
     Map.groupBy(statements, ({ label }) => label)
@@ -12,3 +14,5 @@
 {#each Array.from(results, ([name, value]) => ({ name, value })) as item}
     <p>{item.name} {item.value} ⌀</p>
 {/each}
+
+<RoundChart/>
