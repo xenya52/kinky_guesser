@@ -1,1 +1,0 @@
-/home/xenya/Development/RustStuff/kinky_guesser/target/debug/kinky_guesser: /home/xenya/Development/RustStuff/kinky_guesser/src/json_reader.rs /home/xenya/Development/RustStuff/kinky_guesser/src/main.rs
