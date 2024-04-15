@@ -1,31 +1,27 @@
 <script>
-  import Questionnaire from "./components/Questionnaire.svelte"
-  import { Button } from "flowbite-svelte"
+  import TopBar from "./components/TopBar.svelte"
+  import Questionnaire from "./pages/Questionnaire/Questionnaire.svelte"
+  import Result from "./pages/Result.svelte"
+  import Home from "./pages/Home.svelte"
   import { Route, Router, Link } from "svelte-routing";
-  import { DarkMode } from 'flowbite-svelte';
-
   let path = location.pathname;
 </script>
-<div class="body">
-  <Router>
-    <div  on:click={() => (path = location.pathname)}>
-      <Link to="/"><Button>Startpage</Button></Link>
-      <Link to="/questionnaire"><Button>Questionnaire</Button></Link>
-      <DarkMode />
-    </div>
-      You are here: <code>{path}</code>
-      <Route path="/">
-        <h1>Welcome Home!</h1>
-      </Route>
-  
-      <Route path="/questionnaire" component={Questionnaire} />
-  </Router>    
-</div>
+
+<Router>
+  <TopBar />
+  <div class="body">
+    <Route path="/" component={Home}>
+    </Route>
+    <Route path="/questionnaire" component={Questionnaire} />
+    <Route path="/Result" component={Result} />
+  </div>
+</Router>
 <style>
   .body{
-    border: 1px solid red;
+    border: 2px solid yellow;
     margin-left: 15%;
     margin-right: 15%;
     margin-top: 5%;
+    justify-content: center;
   }
 </style>

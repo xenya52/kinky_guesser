@@ -2,9 +2,9 @@
     import { Button } from 'flowbite-svelte';
 
     import Statement from "./Statement.svelte";
-    import Result from './Result.svelte';
+    import Result from '../Result.svelte';
 
-    import config from "../../config/config.json"
+    import config from "../../../config/config.json"
 
     let statements = []
     config.statements.forEach((statement) => {
@@ -13,7 +13,7 @@
     let showResult = false
 </script>
 {#if !showResult}
-    <div class="test2">
+    <div class="statement-head">
         <p>Strongly Disagree</p>
         <p>Strongly Agree</p>
     </div>
@@ -23,25 +23,20 @@
         <Statement description={statement.description} bind:value={statement.value}/>
     </div>    
     {/each}
-
+    <Button on:click={() => (showResult = !showResult)} style="float: right">Submit</Button>
 {:else}
     <Result statements={statements}/>
 {/if}
-
-<Button on:click={() => (showResult = !showResult)} style="float: right">Submit</Button>
-
 <style>
-    p {
-        background-color: #c026d3;
-        font-size: 1vw;
-        padding: 2px;
-        border-radius: 2rem;
-    }
-    .test2{
+    .statement-head{
         display: grid;
         grid-template-columns: auto auto;
     }
-    .test2 p{
+    .statement-head p{
+        background-color: #c026d3;
+        font-size: 15px;
+        padding: 2px;
+        border-radius: 2rem;
         margin-left: 20%;
         margin-right: 20%;
         text-align: center;

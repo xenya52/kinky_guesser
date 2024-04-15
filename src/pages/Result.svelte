@@ -1,6 +1,6 @@
 <script>
     import { label } from "@unovis/ts/components/axis/style";
-  import PieChart from "./PieChart.svelte";
+  import PieChart from "../components/PieChart.svelte";
 
     export let statements
     let charData = []
@@ -16,18 +16,10 @@
     })
 </script>
 
-<div class="test">
+<div>
 <h1>Results</h1>
 <PieChart results={charData}/>
 
 </div>
 <style>
-.test{
-    position: absolute;
-    left: 40%;
-    right: auto;
-  }
-  .test h1 {
-    font-size: 5vw;
-  }
 </style>
