@@ -18,9 +18,7 @@
         <h1>Welcome Home!</h1>
       </Route>
   
-      <Route path="/questionnaire" component={Questionnaire}>
-        <h1>Welcome in Questionnaire!</h1>
-      </Route>
+      <Route path="/questionnaire" component={Questionnaire} />
   </Router>    
 </div>
 <style>

@@ -12,7 +12,6 @@
   }
 
 </script>
-
 <VisSingleContainer bind:data={results}>
   <VisTooltip {triggers}/>
   <VisDonut value={value}/>

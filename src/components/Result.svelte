@@ -16,8 +16,18 @@
     })
 </script>
 
-{#each Array.from(results, ([name, value]) => ({ name, value })) as item}
-    <p>{item.name} {item.value} ⌀</p>
-{/each}
-
+<div class="test">
+<h1>Results</h1>
 <PieChart results={charData}/>
+
+</div>
+<style>
+.test{
+    position: absolute;
+    left: 40%;
+    right: auto;
+  }
+  .test h1 {
+    font-size: 5vw;
+  }
+</style>
