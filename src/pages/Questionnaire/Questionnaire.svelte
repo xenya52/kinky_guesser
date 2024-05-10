@@ -5,6 +5,7 @@
     import Result from '../Result.svelte';
 
     import config from "../../../config/config.json"
+import { Link } from 'svelte-routing';
 
     let statements = []
     config.statements.forEach((statement) => {
@@ -23,7 +24,9 @@
         <Statement description={statement.description} bind:value={statement.value}/>
     </div>    
     {/each}
-    <Button on:click={() => (showResult = !showResult)} style="float: right">Submit</Button>
+    <!-- TODO!!!! -->
+    <!-- https://svelte.dev/repl/02641874e27d47919e6b7c844ca3a7d1?version=3.30.0 -->
+    <!-- <Button on:click={() => (showResult = !showResult)} style="float: right">Submit</Button> -->
 {:else}
     <Result statements={statements}/>
 {/if}

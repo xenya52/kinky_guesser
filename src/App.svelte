@@ -10,8 +10,7 @@
 <Router>
   <TopBar />
   <div class="body">
-    <Route path="/" component={Home}>
-    </Route>
+    <Route path="/" component={Home} />
     <Route path="/questionnaire" component={Questionnaire} />
     <Route path="/Result" component={Result} />
   </div>
