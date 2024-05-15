@@ -3,6 +3,7 @@
   import Questionnaire from "./pages/Questionnaire/Questionnaire.svelte"
   import Result from "./pages/Result.svelte"
   import Home from "./pages/Home.svelte"
+  import Error from "./pages/Error.svelte"
   import { Route, Router, Link } from "svelte-routing";
   let path = location.pathname;
 </script>
@@ -11,8 +12,11 @@
   <TopBar />
   <div class="body">
     <Route path="/" component={Home} />
-    <Route path="/questionnaire" component={Questionnaire} />
+    <Route path="/questionnaire">
+      <Route path="/1" component={Questionnaire} />  
+    </Route>
     <Route path="/Result" component={Result} />
+    <Route path="*" component={Error}/>
   </div>
 </Router>
 <style>
