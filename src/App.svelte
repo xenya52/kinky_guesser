@@ -7,15 +7,12 @@
   import { Route, Router, Link } from "svelte-routing";
   let path = location.pathname;
 </script>
-
 <Router>
   <TopBar />
   <div class="body">
     <Route path="/" component={Home} />
-    <Route path="/questionnaire">
-      <Route path="/1" component={Questionnaire} />  
-    </Route>
-    <Route path="/Result" component={Result} />
+    <Route path="/questionnaire1" component={Questionnaire}/>
+    <Route path="/result" component={Result} />
     <Route path="*" component={Error}/>
   </div>
 </Router>
